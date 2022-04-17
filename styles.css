@@ -1,3 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  margin-top: 50px;
+  padding: 20px 20px;
+
+  background-color: #ff6b6b;
+  border: none;
+  cursor: pointer;
+  color: #fff5f5;
+}
+
 .container {
   display: grid;
   grid-template-columns: 100px 100px 100px 100px;
@@ -5,11 +27,12 @@
   justify-content: center;
   align-content: center;
   gap: 0.5rem;
-  height: 100vh;
+  /* height: 700px; */
+  margin-top: 20px;
 }
 
 .square {
-  background-color: rgb(104, 139, 170);
+  background-color: #edf2ff;
 }
 
 .square-color {

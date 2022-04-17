@@ -1,5 +1,5 @@
 'use strict';
-
+const buttonEl = document.querySelector('button');
 const container = document.querySelector('.container');
 
 for (let i = 1; i <= 16; i++) {
@@ -9,25 +9,16 @@ for (let i = 1; i <= 16; i++) {
   container.appendChild(div);
 }
 const squares = document.querySelector('.square');
-const squareClick = function (e) {
-  e.stopPropagation();
-};
 
-const div = document.querySelectorAll('div');
+const div = document.querySelectorAll('.square');
+const nodeToArr = [...div];
 
-div.forEach((s) =>
-  s.addEventListener(
-    'click',
-    function (e) {
-      e.stopPropagation();
-      if (e.target !== container) {
-        console.log(e.target);
-        e.target.classList.toggle('square-color');
-      }
-      // console.log(squares);
-    },
-    {
-      capture: true,
-    }
-  )
+nodeToArr.forEach((e) =>
+  e.addEventListener('mousemove', function (mv) {
+    mv.target.classList.add('square-color');
+  })
 );
+
+buttonEl.addEventListener('click', function (i) {
+  nodeToArr.forEach((e) => e.classList.remove('square-color'));
+});
