@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+  justify-content: center;
+  align-content: center;
+  gap: 0.5rem;
+  height: 100vh;
+}
+
+.square {
+  background-color: rgb(104, 139, 170);
+}
+
+.square-color {
+  background-color: #fa5252;
+}
