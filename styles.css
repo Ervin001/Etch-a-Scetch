@@ -6,8 +6,8 @@
 body {
   display: grid;
 
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column;
+  justify-content: center; */
 }
 
 button {
@@ -17,22 +17,24 @@ button {
   background-color: #ff6b6b;
   border: none;
   cursor: pointer;
-  color: #fff5f5;
+  color: #edf2ff;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+
   justify-content: center;
   align-content: center;
-  gap: 0.5rem;
-  /* height: 700px; */
-  margin-top: 20px;
+  gap: 0.25rem;
+  margin-top: 50px;
 }
 
 .square {
   background-color: #edf2ff;
+  height: 100px;
+  width: 100px;
 }
 
 .square-color {
